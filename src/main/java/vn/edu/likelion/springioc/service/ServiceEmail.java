@@ -3,7 +3,7 @@ package vn.edu.likelion.springioc.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ServiceSMS implements InterfaceService {
+public class ServiceEmail implements InterfaceService {
 
     @Override
     public void print(String message) {

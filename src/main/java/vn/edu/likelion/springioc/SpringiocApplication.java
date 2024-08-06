@@ -16,9 +16,13 @@ public class SpringiocApplication {
 
 		//ServiceSMS serviceSMS = new ServiceSMS();
 		ApplicationContext context = SpringApplication.run(SpringiocApplication.class, args);
+		String[] contextName = context.getBeanDefinitionNames();
+		for (String name: contextName) {
+			System.out.println(name);
+		}
 
-		ServiceSMS serviceSMS = context.getBean(ServiceSMS.class);
-		serviceSMS.print("123abc");
+//		ServiceSMS serviceSMS = context.getBean(ServiceSMS.class);
+//		serviceSMS.print("123abc");
 
 //		// goi bean ComponentSMS tu IoC Container'
 ////		ComponentSMS componentSMS = context.getBean(ComponentSMS.class);
